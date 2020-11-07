@@ -14,7 +14,7 @@ its a Project Setup or starter project for use React Context API and Reducers.
 
 ### setp 1: clone the repository 
 ### setp 2: run : npm install (to install all the packages required)
-### step 3: run : npm start (by default it will run on http://localhost:2727/)
+### step 3: run : npm start (by default it will run on http://localhost:3030/)
 
 
 # ok now you are good to go....
