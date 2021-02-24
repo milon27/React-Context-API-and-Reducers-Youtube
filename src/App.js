@@ -1,10 +1,10 @@
-import Demo from "./components/layouts/Demo";
+import Router from "./components/routers/Router";
 import MainContext from "./utils/context/MainContext";
 
 function App() {
   return (
     <MainContext>
-      <Demo />
+      <Router />
     </MainContext>
   );
 }
