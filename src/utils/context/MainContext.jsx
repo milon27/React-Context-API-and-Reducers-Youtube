@@ -1,20 +1,22 @@
 import React, { createContext, useReducer } from 'react'
 import AppReducer, { initAppState } from './reducers/AppReducer';
-import DataReducer, { initDataState } from './reducers/DataReducer';
+import AuthReducer, { initAuthState } from './reducers/AuthReducer';
+import ListReducer, { initListState } from './reducers/ListReducer';
 
 export const StateContext = createContext();
 export const DispatchContext = createContext();
 
 export default function MainContext(props) {
+    const [auth, authDispatch] = useReducer(AuthReducer, initAuthState);//for student auth
+    const [app, appDispatch] = useReducer(AppReducer, initAppState);//for app state
+    const [list, listDispatch] = useReducer(ListReducer, initListState);//for any kind of list
 
-    const [data, dataDispatch] = useReducer(DataReducer, initDataState);
-    const [app, appDispatch] = useReducer(AppReducer, initAppState);
 
     const global_state = {
-        data, app
+        auth, list, app
     }
     const global_dispatch = {
-        dataDispatch, appDispatch
+        authDispatch, listDispatch, appDispatch
     }
 
     return (

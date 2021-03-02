@@ -3,7 +3,7 @@ import Demo from '../layouts/Demo'
 export default function DemoPage() {
     return (
         <div>
-            <Demo />
+            demo page
         </div>
     )
 }
